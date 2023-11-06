@@ -1,4 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+//builder.Services.AddDbContext<NewsletterDbContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("NewsletterDbContext") ?? throw new InvalidOperationException("Connection string 'NewsletterDbContext' not found.")));
 
 // Add services to the container.
 
