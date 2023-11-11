@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NewsletterAPI.Data.Contexts;
 using NewsletterAPI.Data.Models;
+using NewsletterAPI.Dto;
 
 namespace NewsletterAPI.Controllers
 {
@@ -14,39 +15,33 @@ namespace NewsletterAPI.Controllers
     [Route("[controller]")]
     public class NewslettersController : Controller
     {
-        private readonly NewsDbContext _context;
+        private readonly ISendNewsToPersonnelListService _sendNewsToPersonnelListService;
+      
 
-        public NewslettersController(NewsDbContext context)
+        public NewslettersController(ISendNewsToPersonnelListService sendNewsToPersonnelListService)
         {
-            _context = context;
+            _sendNewsToPersonnelListService = sendNewsToPersonnelListService;
+            
         }
 
-        // GET: Newsletters
-        [HttpGet]
-        public async Task<IActionResult> Index()
+        [HttpPost("send-test-news")]
+        public async Task<IActionResult> SendNewsToPersonnels([FromBody] NewsletterDto NewsTitle)
         {
-              return _context.Newsletter != null ? 
-                          View(await _context.Newsletter.ToListAsync()) :
-                          Problem("Entity set 'NewsDbContext.Newsletter'  is null.");
-        }
-
-        [HttpPost]
-        //[ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([FromBody] Newsletter newsletter)
-        {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(newsletter);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (NewsTitle == null || string.IsNullOrWhiteSpace(NewsTitle.NewsTitle))
+                {
+                    return BadRequest("Invalid input. News content is required.");
+                }
+
+                await _sendNewsToPersonnelListService.SendNewsToPersonnelList(NewsTitle.NewsTitle);
+
+                return Ok("Test news sent successfully.");
             }
-            return View(newsletter);
-        }
-
-
-        private bool NewsletterExists(int id)
-        {
-          return (_context.Newsletter?.Any(e => e.Id == id)).GetValueOrDefault();
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal Server Error: {ex.Message}");
+            }
         }
     }
 }

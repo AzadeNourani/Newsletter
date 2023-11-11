@@ -1,8 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using NewsletterAPI.Data.Contexts;
+using NewsletterAPI.Dto;
 
-namespace NewsletterAPI.Data.Services.GetPersonnelList
+namespace NewsletterAPI.Data.Services.Queries.GetPersonnelList
 {
     public class GetPersonnelListService : IGetPersonnelListService
     {
@@ -11,11 +12,11 @@ namespace NewsletterAPI.Data.Services.GetPersonnelList
         {
             _context = context;
 
-        }    
+        }
 
         public async Task<List<PersonnelListDto>> ExecuteAsync()
         {
-            const int batchSize = 1000; 
+            const int batchSize = 1000;
 
             var personnelList = new List<PersonnelListDto>();
 

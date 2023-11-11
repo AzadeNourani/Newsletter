@@ -1,0 +1,28 @@
+﻿@using NewsletterAPI.Data.Models
+@model List<SendNewsletterLog>
+
+<h2>News Log</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>PersonnelId</th>
+            <th>NewsTitle</th>
+            <th>SendTime</th>
+            <th>SendStatus</th>
+            <!-- Add other columns as needed -->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var record in Model)
+        {
+            <tr>
+                <td>@record.PersonnelId</td>
+                <th>@record.NewsTitle</th>
+                <td>@record.SendTime</td>
+                <td>@record.SendStatus</td>
+                <!-- Add other columns as needed -->
+            </tr>
+        }
+    </tbody>
+</table>

@@ -56,6 +56,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29ubmVsc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[E:/Azi_C\#_Projects/NewsletterAPI/NewsletterAPI/Views/SendNewsletterLogs/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZE5ld3NsZXR0ZXJMb2dzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Azi_C\#_Projects/NewsletterAPI/NewsletterAPI/Views/SendNewsletterLogs/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZE5ld3NsZXR0ZXJMb2dzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Azi_C\#_Projects/NewsletterAPI/NewsletterAPI/Views/SendNewsletterLogs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZE5ld3NsZXR0ZXJMb2dzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Azi_C\#_Projects/NewsletterAPI/NewsletterAPI/Views/SendNewsletterLogs/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZE5ld3NsZXR0ZXJMb2dzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Azi_C\#_Projects/NewsletterAPI/NewsletterAPI/Views/SendNewsletterLogs/GetNewsLog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZE5ld3NsZXR0ZXJMb2dzXEdldE5ld3NMb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Azi_C\#_Projects/NewsletterAPI/NewsletterAPI/Views/SendNewsletterLogs/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VuZE5ld3NsZXR0ZXJMb2dzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Azi_C\#_Projects/NewsletterAPI/NewsletterAPI/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

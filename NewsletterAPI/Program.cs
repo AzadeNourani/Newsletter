@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using NewsletterAPI.Data.Contexts;
-using NewsletterAPI.Data.Services.GetPersonnelList;
 using System.Configuration;
 using NewsletterAPI.Data.Services;
+using NewsletterAPI.Data.Services.Queries.GetPersonnelList;
 
 var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddDbContext<NewsDbContext>(options =>
@@ -28,6 +28,7 @@ builder.Services.AddDbContext<NewsDbContext>(options =>
     options.UseSqlServer(connString));
 
 builder.Services.AddScoped<IGetPersonnelListService, GetPersonnelListService>();
+builder.Services.AddScoped<ISendNewsToPersonnelListService, SendNewsToPersonnelListService>();
 
 
 var app = builder.Build();
@@ -42,10 +43,8 @@ if (app.Environment.IsDevelopment())
 app.UseHangfireDashboard();
 app.UseHangfireServer();
 
-// Starting Service Automaticly
+ // Starting Service Automaticly
 var serviceProvider = builder.Services.BuildServiceProvider();
-//var newsletterService = serviceProvider.GetService<NewsletterService>();
-//newsletterService.LogSentNewslettersForAllPersonnel();
 
 app.UseAuthorization();
 

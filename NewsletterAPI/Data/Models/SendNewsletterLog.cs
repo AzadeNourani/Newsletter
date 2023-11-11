@@ -7,6 +7,7 @@ namespace NewsletterAPI.Data.Models
     {
         public int? PersonnelId { get; set; }
         public int? NewsletterId { get; set; }
+        public string? NewsTitle { get; set; }
         public SendStatus? SendStatus { get; set; }
         public DateTime? SendTime { get; set; }
         public DateTime? ReceiveTime { get; set; }

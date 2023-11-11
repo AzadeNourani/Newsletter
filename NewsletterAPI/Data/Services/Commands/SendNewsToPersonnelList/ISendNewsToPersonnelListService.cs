@@ -4,21 +4,17 @@ using System;
 
 public interface ISendNewsToPersonnelListService
 {
-   
-    public interface ISendNewsToPersonnelListService
-    {
-        Task SendNewsToPersonnelList(List<PersonnelDto> personnelList);
-    }
+    Task SendNewsToPersonnelList(string v);
 
-    public class PersonnelDto
-    {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string NationalCode { get; set; }
+    //public class PersonnelDto
+    //{
+    //    public int Id { get; set; }
+    //    public string FirstName { get; set; }
+    //    public string LastName { get; set; }
+    //    public string NationalCode { get; set; }
 
 
-    }
+    //}
 
     //object DeliveryReports { get; set; }
 

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NewsletterAPI.Data.Services.GetPersonnelList;
+using NewsletterAPI.Data.Services.Queries.GetPersonnelList;
 
 namespace NewsletterAPI.Controllers
 {
