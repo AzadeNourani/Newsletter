@@ -7,6 +7,7 @@ using NewsletterAPI.Data.Contexts;
 using System.Configuration;
 using NewsletterAPI.Data.Services;
 using NewsletterAPI.Data.Services.Queries.GetPersonnelList;
+using NewsletterAPI.Data.Services.Queries.GetLastNews;
 
 var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddDbContext<NewsDbContext>(options =>
@@ -21,7 +22,6 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddHangfire(config => config.UseSqlServerStorage(builder.Configuration.GetConnectionString("NewsletterDbContext")));
-//builder.Services.AddScoped<INewsletterService>();
 string connString = builder.Configuration.GetConnectionString("NewsletterDbContext");
 
 builder.Services.AddDbContext<NewsDbContext>(options =>
@@ -29,6 +29,7 @@ builder.Services.AddDbContext<NewsDbContext>(options =>
 
 builder.Services.AddScoped<IGetPersonnelListService, GetPersonnelListService>();
 builder.Services.AddScoped<ISendNewsToPersonnelListService, SendNewsToPersonnelListService>();
+builder.Services.AddScoped<IGetLastNewsService, GetLastNewsService>();
 
 
 var app = builder.Build();

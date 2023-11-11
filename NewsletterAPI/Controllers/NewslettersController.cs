@@ -36,7 +36,7 @@ namespace NewsletterAPI.Controllers
 
                 await _sendNewsToPersonnelListService.SendNewsToPersonnelList(NewsTitle.NewsTitle);
 
-                return Ok("Test news sent successfully.");
+                return Ok("News sent successfully.");
             }
             catch (Exception ex)
             {

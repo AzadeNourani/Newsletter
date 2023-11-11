@@ -18,6 +18,7 @@ namespace NewsletterAPI.Data.Models
     }
     public enum SendStatus
     {
+        None = 0,
         Sent,
         Sending
     }
