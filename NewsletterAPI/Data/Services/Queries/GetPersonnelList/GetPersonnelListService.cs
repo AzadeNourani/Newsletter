@@ -58,7 +58,7 @@ namespace NewsletterAPI.Data.Services.Queries.GetPersonnelList
                     .Take(batchSize)
                     .Select(p => new PersonnelListDto
                     {
-                        Id = p.Id,
+                        Id  = p.Id,
                         FirstName = p.FirstName,
                         LastName = p.LastName,
                         NationalCode = p.NationalCode

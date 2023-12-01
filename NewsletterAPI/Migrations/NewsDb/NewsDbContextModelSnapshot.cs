@@ -77,7 +77,7 @@ namespace NewsletterAPI.Migrations.NewsDb
                     b.Property<int?>("NewsletterId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PersonnelId")
+                    b.Property<int?>("Id")
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("ReceiveTime")
@@ -96,7 +96,7 @@ namespace NewsletterAPI.Migrations.NewsDb
 
                     b.HasIndex("NewsletterId");
 
-                    b.HasIndex("PersonnelId");
+                    b.HasIndex("Id");
 
                     b.ToTable("SendNewsletterLogs");
                 });
@@ -109,7 +109,7 @@ namespace NewsletterAPI.Migrations.NewsDb
 
                     b.HasOne("NewsletterAPI.Data.Models.Personnel", "Personnel")
                         .WithMany("NewsletterStatuses")
-                        .HasForeignKey("PersonnelId");
+                        .HasForeignKey("Id");
 
                     b.Navigation("Newsletter");
 

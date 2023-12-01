@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\APITestProject.csproj": {}
+    "D:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\APITestProject.csproj": {}
   },
   "projects": {
-    "E:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\APITestProject.csproj": {
+    "D:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\APITestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\APITestProject.csproj",
+        "projectUniqueName": "D:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\APITestProject.csproj",
         "projectName": "APITestProject",
-        "projectPath": "E:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\APITestProject.csproj",
-        "packagesPath": "C:\\Users\\METRO.P30\\.nuget\\packages\\",
-        "outputPath": "E:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\obj\\",
+        "projectPath": "D:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\APITestProject.csproj",
+        "packagesPath": "C:\\Users\\WWW.METRO-KALA.COM\\.nuget\\packages\\",
+        "outputPath": "D:\\Azi_C#_Projects\\NewsletterAPI\\APITestProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\METRO.P30\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WWW.METRO-KALA.COM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +32,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj": {
-                "projectPath": "E:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj"
+              "D:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj": {
+                "projectPath": "D:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj"
               }
             }
           }
@@ -71,8 +75,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -81,21 +84,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj": {
+    "D:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj",
+        "projectUniqueName": "D:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj",
         "projectName": "NewsletterAPI",
-        "projectPath": "E:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj",
-        "packagesPath": "C:\\Users\\METRO.P30\\.nuget\\packages\\",
-        "outputPath": "E:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\obj\\",
+        "projectPath": "D:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\NewsletterAPI.csproj",
+        "packagesPath": "C:\\Users\\WWW.METRO-KALA.COM\\.nuget\\packages\\",
+        "outputPath": "D:\\Azi_C#_Projects\\NewsletterAPI\\NewsletterAPI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\METRO.P30\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\WWW.METRO-KALA.COM\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,8 +187,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -193,7 +199,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

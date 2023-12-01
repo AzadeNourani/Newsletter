@@ -5,7 +5,6 @@ namespace NewsletterAPI.Data.Models
 {
     public partial class SendNewsletterLog : Base
     {
-        public int? PersonnelId { get; set; }
         public int? NewsletterId { get; set; }
         public string? NewsTitle { get; set; }
         public SendStatus? SendStatus { get; set; }
@@ -22,4 +21,6 @@ namespace NewsletterAPI.Data.Models
         Sent,
         Sending
     }
+
+    //public ICollection<Personnel> Personnel { get; set; }
 }

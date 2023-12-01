@@ -24,7 +24,34 @@ public class SendNewsToPersonnelListService:ISendNewsToPersonnelListService
             _context = context;
         }
 
-        public async Task SendNewsToPersonnelList(string foo)
+    public object DeliveryReports { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+    public List<Personnel> GetAllPersonnels()
+    {
+        throw new NotImplementedException();
+    }
+
+    public Newsletter GetNewsletterByDate(DateTime date)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Personnel GetPersonById(int personId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void LogSentNewsletter(SendNewsletterLog report)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void SaveNewsletter(Newsletter newsletter)
+    {
+        throw new NotImplementedException();
+    }
+
+    public async Task SendNewsToPersonnelList(string foo)
          {
             try
             {
@@ -38,7 +65,7 @@ public class SendNewsToPersonnelListService:ISendNewsToPersonnelListService
                     // Record in SendNewsLog
                     _context.SendNewsletterLogs.Add(new SendNewsletterLog
                     {
-                        PersonnelId = personnel.Id,
+                        Id = personnel.Id,
                         SendTime = DateTime.UtcNow,
                         SendStatus = SendStatus.Sent,
                         NewsletterId=2,
@@ -47,8 +74,8 @@ public class SendNewsToPersonnelListService:ISendNewsToPersonnelListService
                     });
                 }
 
-                // Save all changes after the loop
-                await _context.SaveChangesAsync();
+            // Save all changes after the loop
+            await _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {

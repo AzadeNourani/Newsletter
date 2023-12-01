@@ -17,110 +17,102 @@ namespace NewsletterAPI.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.0")
+                .HasAnnotation("ProductVersion", "7.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("NewsletterAPI.Data.Models.Newsletter", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("NewsletterID");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("SendDate")
-                        .HasColumnType("datetime");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Newsletter", (string)null);
-                });
-
-            modelBuilder.Entity("NewsletterAPI.Data.Models.NewsletterStatus", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("StatusID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int?>("NewsletterId")
-                        .HasColumnType("int")
-                        .HasColumnName("NewsletterID");
-
-                    b.Property<int?>("PersonnelId")
-                        .HasColumnType("int")
-                        .HasColumnName("PersonnelID");
-
-                    b.Property<DateTime?>("ReceiveTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<int?>("SendStatus")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime?>("SendTime")
-                        .HasColumnType("datetime");
-
-                    b.Property<bool?>("ViewStatus")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id")
-                        .HasName("PK__Newslett__C8EE2043E96496D3");
-
-                    b.HasIndex("NewsletterId");
-
-                    b.HasIndex("PersonnelId");
-
-                    b.ToTable("NewsletterStatus", (string)null);
+                    b.ToTable("Newsletter");
                 });
 
             modelBuilder.Entity("NewsletterAPI.Data.Models.Personnel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("PersonnelID");
+                        .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("FirstName")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NationalCode")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Personnel");
+                    b.ToTable("Personnels");
                 });
 
-            modelBuilder.Entity("NewsletterAPI.Data.Models.NewsletterStatus", b =>
+            modelBuilder.Entity("NewsletterAPI.Data.Models.SendNewsletterLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("NewsTitle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("NewsletterId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ReceiveTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("SendStatus")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("SendTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool?>("ViewStatus")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NewsletterId");
+
+                    b.HasIndex("Id");
+
+                    b.ToTable("SendNewsletterLogs");
+                });
+
+            modelBuilder.Entity("NewsletterAPI.Data.Models.SendNewsletterLog", b =>
                 {
                     b.HasOne("NewsletterAPI.Data.Models.Newsletter", "Newsletter")
                         .WithMany("NewsletterStatuses")
-                        .HasForeignKey("NewsletterId")
-                        .HasConstraintName("FK__Newslette__Newsl__38996AB5");
+                        .HasForeignKey("NewsletterId");
 
                     b.HasOne("NewsletterAPI.Data.Models.Personnel", "Personnel")
                         .WithMany("NewsletterStatuses")
-                        .HasForeignKey("PersonnelId")
-                        .HasConstraintName("FK__Newslette__Perso__37A5467C");
+                        .HasForeignKey("Id");
 
                     b.Navigation("Newsletter");
 

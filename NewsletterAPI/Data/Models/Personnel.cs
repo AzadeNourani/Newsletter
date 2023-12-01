@@ -7,13 +7,14 @@ namespace NewsletterAPI.Data.Models
     {
         public Personnel()
         {
-            NewsletterStatuses = new HashSet<SendNewsletterLog>();
+            SendNewsletterLogs = new HashSet<SendNewsletterLog>();
         }
 
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? NationalCode { get; set; }
+       
 
-        public virtual ICollection<SendNewsletterLog> NewsletterStatuses { get; set; }
+        public virtual ICollection<SendNewsletterLog> SendNewsletterLogs { get; set; }
     }
 }

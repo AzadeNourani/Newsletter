@@ -6,28 +6,27 @@ public interface ISendNewsToPersonnelListService
 {
     Task SendNewsToPersonnelList(string v);
 
-    //public class PersonnelDto
-    //{
-    //    public int Id { get; set; }
-    //    public string FirstName { get; set; }
-    //    public string LastName { get; set; }
-    //    public string NationalCode { get; set; }
+    public class PersonnelDto
+    {
+        public int Id { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string NationalCode { get; set; }
 
 
-    //}
+    }
 
-    //object DeliveryReports { get; set; }
+    object DeliveryReports { get; set; }
 
-    ////DbSet<NewsletterSentLog> NewsletterSentLogs { get; set; }
+    //DbSet<NewsletterSentLog> NewsletterSentLogs { get; set; }
 
-    //List<Personnel> GetAllPersonnels();
+    List<Personnel> GetAllPersonnels();
 
-    //Personnel GetPersonById(int personId);
+    Personnel GetPersonById(int personId);
 
-    //Newsletter GetNewsletterByDate(DateTime date);
-    //void SaveNewsletter(Newsletter newsletter);
+    Newsletter GetNewsletterByDate(DateTime date);
+    void SaveNewsletter(Newsletter newsletter);
 
-    //void LogSentNewsletter(SendNewsletterLog report);
+    void LogSentNewsletter(SendNewsletterLog report);
 
-    //int SaveChanges();
 }

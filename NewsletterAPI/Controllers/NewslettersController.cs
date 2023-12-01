@@ -16,27 +16,37 @@ namespace NewsletterAPI.Controllers
     public class NewslettersController : Controller
     {
         private readonly ISendNewsToPersonnelListService _sendNewsToPersonnelListService;
-      
+        private readonly NewsDbContext _context;
 
-        public NewslettersController(ISendNewsToPersonnelListService sendNewsToPersonnelListService)
+        public NewslettersController(ISendNewsToPersonnelListService sendNewsToPersonnelListService,NewsDbContext newsDbContext)
         {
             _sendNewsToPersonnelListService = sendNewsToPersonnelListService;
+            _context = newsDbContext;
             
         }
 
         [HttpPost("send-test-news")]
-        public async Task<IActionResult> SendNewsToPersonnels([FromBody] NewsletterDto NewsTitle)
+        public async Task<IActionResult> SendNewsToPersonnels([FromBody] NewsletterDto News)
         {
             try
             {
-                if (NewsTitle == null || string.IsNullOrWhiteSpace(NewsTitle.NewsTitle))
+                if (News.Title == null || string.IsNullOrWhiteSpace(News.Title))
                 {
                     return BadRequest("Invalid input. News content is required.");
                 }
 
-                await _sendNewsToPersonnelListService.SendNewsToPersonnelList(NewsTitle.NewsTitle);
+               // await _sendNewsToPersonnelListService.SendNewsToPersonnelList(NewsTitle.NewsTitle);
+                await _context.Newsletter.AddAsync(new Newsletter
+                {
+                    Title=News.Title,
+                    Content=News.Content,
+                    SendDate=DateTime.UtcNow,
+                    
+                }
+                    );
+                await _context.SaveChangesAsync();
 
-                return Ok("News sent successfully.");
+                return Ok("News Sent");
             }
             catch (Exception ex)
             {

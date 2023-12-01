@@ -9,20 +9,21 @@ using NewsletterAPI.Data.Contexts;
 
 #nullable disable
 
-namespace NewsletterAPI.Migrations.NewsDb
+namespace NewsletterAPI.Migrations
 {
     [DbContext(typeof(NewsDbContext))]
-    [Migration("20231109170740_initNews")]
-    partial class initNews
+    [Migration("20231121201017_init")]
+    partial class init
     {
+        /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.0")
+                .HasAnnotation("ProductVersion", "7.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("NewsletterAPI.Data.Models.Newsletter", b =>
                 {
@@ -30,7 +31,7 @@ namespace NewsletterAPI.Migrations.NewsDb
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
@@ -52,7 +53,7 @@ namespace NewsletterAPI.Migrations.NewsDb
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
@@ -74,7 +75,10 @@ namespace NewsletterAPI.Migrations.NewsDb
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("NewsTitle")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("NewsletterId")
                         .HasColumnType("int");

@@ -1,0 +1,6 @@
+D:\Azi_C#_Projects\NewsletterAPI\APITestProject\bin\Debug\net6.0\CoverletSourceRootsMapping_APITestProject
+D:\Azi_C#_Projects\NewsletterAPI\APITestProject\obj\Debug\net6.0\APITestProject.csproj.AssemblyReference.cache
+D:\Azi_C#_Projects\NewsletterAPI\APITestProject\obj\Debug\net6.0\APITestProject.GeneratedMSBuildEditorConfig.editorconfig
+D:\Azi_C#_Projects\NewsletterAPI\APITestProject\obj\Debug\net6.0\APITestProject.AssemblyInfoInputs.cache
+D:\Azi_C#_Projects\NewsletterAPI\APITestProject\obj\Debug\net6.0\APITestProject.AssemblyInfo.cs
+D:\Azi_C#_Projects\NewsletterAPI\APITestProject\obj\Debug\net6.0\APITestProject.csproj.CoreCompileInputs.cache

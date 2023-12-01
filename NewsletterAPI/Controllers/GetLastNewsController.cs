@@ -8,18 +8,12 @@ namespace NewsletterAPI.Controllers
 {
     public class GetLastNewsController : Controller
     {
-        //private readonly NewsDbContext _newsDbContext;
-
-        //public GetLastNewsController(NewsDbContext newsDbContext)
-        //{
-        //    _newsDbContext = newsDbContext;
-        //}
-
-
         private readonly IGetLastNewsService _getlastNewsService;
-        public GetLastNewsController(IGetLastNewsService getlastNewsService)
+        private readonly NewsDbContext _newsDbContext;
+        public GetLastNewsController(IGetLastNewsService getlastNewsService, NewsDbContext newsDbContext)
         {
             _getlastNewsService = getlastNewsService;
+            _newsDbContext = newsDbContext;
         }
 
         [HttpGet("get-last-news")]
@@ -27,9 +21,9 @@ namespace NewsletterAPI.Controllers
         {
             try
             {
-                await _getlastNewsService.ExecuteAsync();
+                var lastNewsletter = await _getlastNewsService.ExecuteAsync();
 
-                return Ok("News sent successfully.");
+                 return Ok(lastNewsletter);
             }
             catch (Exception ex)
             {
