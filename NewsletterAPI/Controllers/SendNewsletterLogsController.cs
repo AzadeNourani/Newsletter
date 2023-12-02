@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Hangfire;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NewsletterAPI.Data.Contexts;
@@ -18,7 +19,8 @@ namespace NewsletterAPI.Controllers
         [HttpPost("News-log")]
         public async Task<IActionResult> Index()
         {
-            await _sendNewsToPersonnelListService.ExecuteAsync();
+            BackgroundJob.Enqueue <ISendNewsToPersonnelListService>(p => p.ExecuteAsync());
+           //await _sendNewsToPersonnelListService.ExecuteAsync();
             return Ok("lastNews Sent to All prsonnels successfully");
 
         }

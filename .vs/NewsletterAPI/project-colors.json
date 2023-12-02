@@ -10,7 +10,12 @@
       "ProjectGuid": "42a071ab-1d09-4bad-905e-a9d6972acf49",
       "DisplayName": "NewsletterAPI",
       "ColorIndex": 0
+    },
+    "f0b1922f-b604-42a3-86bd-b37e3c058ab4": {
+      "ProjectGuid": "f0b1922f-b604-42a3-86bd-b37e3c058ab4",
+      "DisplayName": "HangfireConsole",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }
