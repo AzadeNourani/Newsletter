@@ -12,38 +12,7 @@ namespace NewsletterAPI.Data.Services.Queries.GetPersonnelList
         {
             _context = context;
 
-        }
-
-        //public async Task<List<PersonnelListDto>> ExecuteAsync()
-        //{
-        //    const int batchSize = 100;
-
-        //    var personnelList = new List<PersonnelListDto>();
-
-        //    for (int skip = 0; ; skip += batchSize)
-        //    {
-        //        var batch = await _context.Personnels
-        //            .Skip(skip)
-        //            .Take(batchSize)
-        //            .Select(p => new PersonnelListDto
-        //            {
-        //                Id = p.Id,
-        //                FirstName = p.FirstName,
-        //                LastName = p.LastName,
-        //                NationalCode = p.NationalCode
-        //            })
-        //            .ToListAsync();
-
-        //        if (batch.Count == 0)
-        //        {
-        //            break; // No more records
-        //        }
-
-        //        personnelList.AddRange(batch);
-        //    }
-
-        //    return personnelList;
-        //}
+        } 
 
         public async Task<List<PersonnelListDto>> ExecuteAsync()
         {

@@ -8,20 +8,19 @@ namespace NewsletterAPI.Controllers
 {
     public class SendNewsletterLogsController : Controller
     {
-        private readonly NewsDbContext _newsDbContext;
+        private readonly ISendNewsToPersonnelListService _sendNewsToPersonnelListService;
 
-        public SendNewsletterLogsController(NewsDbContext newsDbContext)
+        public SendNewsletterLogsController(ISendNewsToPersonnelListService sendNewsToPersonnelListService)
         {
-            _newsDbContext = newsDbContext;
+            _sendNewsToPersonnelListService = sendNewsToPersonnelListService;
         }
 
-        // GET: SendNewsletterLogs
-        [HttpGet("News-log")]
-        //  public async Task<IActionResult> Index()
-        public IActionResult GetNewsLog()
+        [HttpPost("News-log")]
+        public async Task<IActionResult> Index()
         {
-            var newsDbContext = _newsDbContext.SendNewsletterLogs.Include(s => s.Newsletter).Include(s => s.Personnel);
-            return View( newsDbContext.ToList());
+            await _sendNewsToPersonnelListService.ExecuteAsync();
+            return Ok("lastNews Sent to All prsonnels successfully");
+
         }
 
     }

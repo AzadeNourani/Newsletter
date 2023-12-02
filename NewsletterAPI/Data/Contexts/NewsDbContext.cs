@@ -26,34 +26,19 @@ namespace NewsletterAPI.Data.Contexts
                 optionsBuilder.UseSqlServer(connectionString);
             }
 
-        }
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
-        //    modelBuilder.Entity<SendNewsletterLog>()
-        //  .HasOne(s => s.Personnel)
-        //  .WithMany(p => p.SendNewsletterLogs)
-        //  .HasForeignKey(s => s.Id);
-        //    //modelBuilder.Entity<Personnel>().HasOne(s=>s.SendNewsletterLogs).WithOne(p=>p.Personnel).HasForeignKey<SendNewsletterLog>(p=>p.PersonnelId);
-        //}
+        }      
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<SendNewsletterLog>()
-                .HasOne(s => s.Personnel)
-                .WithMany(p => p.SendNewsletterLogs)
-                .HasForeignKey(s => s.Id);
+                .HasOne<Personnel>()
+                .WithMany(n => n.SendNewsletterLogs)
+                .HasForeignKey(s => s.PersonnelId);
 
             modelBuilder.Entity<SendNewsletterLog>()
-                .HasOne(s => s.Newsletter)
-                .WithMany() // Assuming there is no navigation property in the Newsletter class back to SendNewsletterLog
-                .HasForeignKey(s => s.Id);
-
-            // Additional code for the Newsletter table relationship
-            modelBuilder.Entity<Newsletter>()
-                .HasMany(n => n.SendNewsletterLogs)
-                .WithOne(s => s.Newsletter)
+                .HasOne<Newsletter>()
+                .WithMany(n => n.SendNewsletterLogs)
                 .HasForeignKey(s => s.NewsletterId);
         }
     }
