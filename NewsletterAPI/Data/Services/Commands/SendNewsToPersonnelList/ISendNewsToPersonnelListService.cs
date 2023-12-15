@@ -5,5 +5,5 @@ using System;
 public interface ISendNewsToPersonnelListService
 {
     Task ExecuteAsync();
-    //Task<List<...Dto>> ExecuteAsync();
+    //Task<List<...DTO>> ExecuteAsync();
 }

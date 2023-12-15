@@ -15,7 +15,17 @@
       "ProjectGuid": "f0b1922f-b604-42a3-86bd-b37e3c058ab4",
       "DisplayName": "HangfireConsole",
       "ColorIndex": 1
+    },
+    "7d862845-42f5-48e9-8187-d694020e609c": {
+      "ProjectGuid": "7d862845-42f5-48e9-8187-d694020e609c",
+      "DisplayName": "APITestProject",
+      "ColorIndex": 2
+    },
+    "3eb99d83-f3d2-44c5-997d-1431959602b7": {
+      "ProjectGuid": "3eb99d83-f3d2-44c5-997d-1431959602b7",
+      "DisplayName": "JwtInCore",
+      "ColorIndex": 3
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 4
 }

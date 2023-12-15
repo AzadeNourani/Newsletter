@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using NewsletterAPI.Data.Contexts;
 using NewsletterAPI.Data.Services.Queries.GetLastNews;
-using NewsletterAPI.Dto;
+//using NewsletterAPI.DTOs;
 
 namespace NewsletterAPI.Controllers
 {

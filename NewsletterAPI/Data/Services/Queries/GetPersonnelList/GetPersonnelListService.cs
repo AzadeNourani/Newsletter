@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using NewsletterAPI.Data.Contexts;
-using NewsletterAPI.Dto;
+using NewsletterAPI.DTOs;
 
 namespace NewsletterAPI.Data.Services.Queries.GetPersonnelList
 {
@@ -14,10 +14,10 @@ namespace NewsletterAPI.Data.Services.Queries.GetPersonnelList
 
         } 
 
-        public async Task<List<PersonnelListDto>> ExecuteAsync()
+        public async Task<List<PersonnelListDTO>> ExecuteAsync()
         {
             const int batchSize = 100;
-            var personnelList = new List<PersonnelListDto>();
+            var personnelList = new List<PersonnelListDTO>();
             int totalRecordsProcessed = 0;
 
             while (true)
@@ -25,7 +25,7 @@ namespace NewsletterAPI.Data.Services.Queries.GetPersonnelList
                 var batch = await _context.Personnels
                     .Skip(totalRecordsProcessed)
                     .Take(batchSize)
-                    .Select(p => new PersonnelListDto
+                    .Select(p => new PersonnelListDTO
                     {
                         Id  = p.Id,
                         FirstName = p.FirstName,

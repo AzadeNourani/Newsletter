@@ -26,20 +26,10 @@ namespace NewsletterAPI.Controllers
 
             //BackgroundJob.Enqueue <ISendNewsToPersonnelListService>(p => p.ExecuteAsync());
             //RecurringJob.AddOrUpdate<ISendNewsToPersonnelListService>("SendNewsToPersonnelList",
-            //service => service.ExecuteAsync(), "*/5 * * * *");
+            //service => service.ExecuteAsync(), "*/5 * * * *");// run every five minutes
+            
+            _recurringJobManager.AddOrUpdate("SendNewsToPersonnels_Every_Minute", () => _sendNewsToPersonnelListService.ExecuteAsync(), Cron.Minutely);
 
-            //var scheduledTime = new TimeSpan(21, 40, 0);
-            //var scheduleOptions = new EnqueuedState { Queue = "default" };
-
-            //RecurringJob.AddOrUpdate<ISendNewsToPersonnelListService>("SendNewsToPersonnelList",
-            //    service => service.ExecuteAsync(), Cron.Daily(scheduledTime.Hours, scheduledTime.Minutes), scheduleOptions);
-
-            // _recurringJobManager.AddOrUpdate("", (sendNewsToPersonnelListService) => Job, Cron.Daily);
-            // _recurringJobManager.AddOrUpdate(_sendNewsToPersonnelListService, () => SendNewsletterJob(), Cron.Daily);
-
-            _recurringJobManager.AddOrUpdate("SendNewsToPersonnel", () => _sendNewsToPersonnelListService.ExecuteAsync(), Cron.Minutely);
-
-            //await _sendNewsToPersonnelListService.ExecuteAsync();
             return Ok("lastNews Sent to All prsonnels successfully");
 
         }

@@ -1,10 +1,10 @@
 ﻿using NewsletterAPI.Data.Contexts;
-using NewsletterAPI.Dto;
+using NewsletterAPI.DTOs;
 
 namespace NewsletterAPI.Data.Services.Queries.GetPersonnelList
 {
     public interface IGetPersonnelListService
     {
-        Task<List<PersonnelListDto>> ExecuteAsync();
+        Task<List<PersonnelListDTO>> ExecuteAsync();
     }
 }

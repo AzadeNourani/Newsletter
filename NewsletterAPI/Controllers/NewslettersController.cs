@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NewsletterAPI.Data.Contexts;
 using NewsletterAPI.Data.Models;
-using NewsletterAPI.Dto;
+using NewsletterAPI.DTOs;
 
 namespace NewsletterAPI.Controllers
 {
@@ -26,7 +26,7 @@ namespace NewsletterAPI.Controllers
         }
 
         [HttpPost("send-test-news")]
-        public async Task<IActionResult> SendNewsToPersonnels([FromBody] NewsletterDto News)
+        public async Task<IActionResult> SendNewsToPersonnels([FromBody] NewsletterDTO News)
         {
             try
             {

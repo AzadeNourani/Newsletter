@@ -1,10 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using NewsletterAPI.Data.Models;
 
 namespace NewsletterAPI.Data.Contexts
 {
-    public class NewsDbContext : DbContext
+    public class NewsDbContext : IdentityDbContext
     {
+ 
         public NewsDbContext(DbContextOptions<NewsDbContext> options) : base(options)
         {
 
