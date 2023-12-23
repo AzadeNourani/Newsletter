@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using NewsletterAPI.Data.Models;
 
 namespace NewsletterAPI.Models;
 
@@ -31,6 +32,7 @@ public partial class NewsletterDbContext : DbContext
 
     public virtual DbSet<Newsletter> Newsletters { get; set; }
 
+    public virtual DbSet<User> Users { get; set; }
     public virtual DbSet<Personnel> Personnels { get; set; }
 
     public virtual DbSet<Schema> Schemas { get; set; }

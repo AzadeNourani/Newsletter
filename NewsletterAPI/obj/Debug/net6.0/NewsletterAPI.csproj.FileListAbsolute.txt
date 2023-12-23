@@ -326,7 +326,6 @@ D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\NewsletterAPI.Mv
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\NewsletterAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\NewsletterAPI.RazorAssemblyInfo.cache
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\NewsletterAPI.RazorAssemblyInfo.cs
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\NewsletterAPI.csproj.AssemblyReference.cache
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\nlog.config
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\appsettings.Development.json
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\appsettings.json
@@ -370,16 +369,9 @@ D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Entity
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -398,7 +390,6 @@ D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Visual
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Mono.TextTemplating.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Moq.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\NLog.dll
@@ -419,7 +410,6 @@ D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\SQLitePCLRaw.pro
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.CodeDom.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Composition.AttributedModel.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Composition.Convention.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Composition.Hosting.dll
@@ -432,8 +422,6 @@ D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Reflectio
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Runtime.Caching.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Security.Permissions.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Text.Json.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Windows.Extensions.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\xunit.abstractions.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\xunit.core.dll
@@ -609,7 +597,6 @@ D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\linux-m
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\linux-s390x\native\libe_sqlite3.so
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\linux-x64\native\libe_sqlite3.so
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\linux-x86\native\libe_sqlite3.so
@@ -625,7 +612,6 @@ D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\unix\li
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\staticwebassets.build.json
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\staticwebassets.development.json
@@ -635,3 +621,5 @@ D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\NewsletterAPI.dl
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\ref\NewsletterAPI.dll
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\NewsletterAPI.pdb
 D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\NewsletterAPI.genruntimeconfig.cache
+D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Azi_C#_Projects\NewsletterAPI\NewsletterAPI\obj\Debug\net6.0\NewsletterAPI.csproj.AssemblyReference.cache

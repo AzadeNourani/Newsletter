@@ -215,7 +215,7 @@ namespace NewsletterAPI.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_NewsletterStatus_NewsletterID",
                 table: "NewsletterStatus",
-                column: "NewsletterID");
+                column: "ID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_NewsletterStatus_PersonnelID",

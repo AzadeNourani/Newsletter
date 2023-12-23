@@ -11,11 +11,10 @@ namespace NewsletterAPI
 
         public JwtFeilds Authenticate(string userName, string Password)
         {
-            if (userName != "aaa@a.com"  || Password != "123456")
-            {
-                return null;
-            }
-
+            //if (userName != "aaa@a.com"  || Password != "123456")
+            //{
+            //    return null;
+            //}
             var tokenExpireTimeStamp = DateTime.Now.AddHours(Constansts.JWT_TOKEN_EXPIRE_TIME);
             var jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
             var tokenKey = Encoding.ASCII.GetBytes(Constansts.JWT_SECURITY_KEY_FOR_TOKEN);

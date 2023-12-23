@@ -11,6 +11,7 @@ namespace NewsletterAPI.Data.Contexts
         {
 
         }
+        public DbSet<User> Users { get; set; }
         public DbSet<Personnel> Personnels { get; set; }
         public DbSet<Newsletter> Newsletter { get; set; }
         public DbSet<SendNewsletterLog> SendNewsletterLogs { get; set; }
